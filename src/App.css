@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Phone-frame {
+  /* background-image: #dedede; */
+  background-image: url('./WAbg.png');
+  /* height: 4.54in;
+  width: 3.2in; */
+  aspect-ratio: 9/20;
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  border-radius: 25px;
+  overflow-y: hidden;
+  padding: 25px 2px;
+}
+
+
+.Chat-container{
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: scroll;
+}
+
+.Chat-container::-webkit-scrollbar {
+  width: 0.25rem;
+  /* padding: 10px; */
+}
+
+.Chat-container::-webkit-scrollbar-thumb {
+  background: #9d9ba1;
+  border-radius: 10px;
+  /* padding: 10px; */
+}
+
+.message-container{
+  border-radius: 25px;
+  margin-block-start: 1rem;
+  padding: 16px;
+  text-align: left;
+  font-size: 1rem;
+  max-width: 24vh;
+  word-wrap: break-word;
+}
+
+.designated{
+  background-color: #0ecf4e;
+  /* margin-right: 10px; */
+  margin-left: 50px;
+  align-self: flex-end;
+  border-top-right-radius: 0;
+  }
+
+.other{
+  background-color: #686b69;
+  /* margin-left: 10px; */
+  margin-right: 50px;
+  border-top-left-radius: 0;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
