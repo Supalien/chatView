@@ -24,10 +24,19 @@ function App() {
     }
     else console.log('error', e);
   }
-  const msgs = messages.map((m,c) => m.author !== designated? 
-  <Message className="message-container designated" content={m.content} key={c}></Message> :
-  <Message className="message-container other" content={m.content} key={c}></Message>);
+  let msgs = Object.groupBy(messages, (m) => m.date);
   console.log(msgs);
+  // for each date create a list of messages for that date
+  msgs = Object.keys(msgs).map(key => <>
+      {msgs[key].map((m, c) => m.author !== designated? 
+      <Message className="message-container designated" msg={m} key={c}></Message> :
+      <Message className="message-container other" msg={m} key={c}></Message>).reverse()}
+      <h3>{key}</h3>
+      </>
+  );
+  //   m => m.author !== designated? 
+  // <Message className="message-container designated" msg={m} key={c}></Message> :
+  // <Message className="message-container other" msg={m} key={c}></Message>);
   return (
     <div className="App">
       <header className="App-header">
@@ -36,7 +45,7 @@ function App() {
         </h1>
         <div className="Phone-frame" onDrop={handleDrop} onDragOver={handleDragOver}>
           <div className='Chat-container'>
-            {msgs}
+            {msgs.reverse()}
           </div>
         </div>
       </header>

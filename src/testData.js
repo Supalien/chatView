@@ -4,68 +4,81 @@ export const messages = [
     {
         author: "doron",
         content: "Hello World!",
-        hourSent: "02:59"
+        time: "02:59",
+        date: "02/02/2020"
     },
 
     {
         author: "orel",
         content: "tov",
-        hourSent: "03:24"
+        time: "03:24",
+        date: "02/02/2020"
     },
     {
         author: "orel",
         content: "this is a very very long message that will not fit in the minimum size of message",
-        hourSent: "06:27"
+        time: "06:27",
+        date: "02/02/2020"
     },
     {
         author: "doron",
         content: "spam",
-        hourSent: "13:24"
+        time: "13:24",
+        date: "03/02/2020"
     },
     {
         author: "orel",
         content: "tov",
-        hourSent: "13:24"
+        time: "15:24",
+        date: "04/02/2020"
     },
     {
         author: "doron",
         content: "spam",
-        hourSent: "13:25"
+        time: "17:25",
+        date: "04/02/2020"
     },
     {
         author: "orel",
         content: "tov",
-        hourSent: "13:25"
+        time: "23:25",
+        date: "05/02/2020"
     },
     {
         author: "doron",
         content: "spm",
-        hourSent: "13:26"
+        time: "05:26",
+        date: "06/02/2020"
     },
     {
         author: "orel",
         content: "tov",
-        hourSent: "13:26"
+        time: "13:26",
+        date: "06/02/2021"
     },
     {
         author: "doron",
         content: "a",
-        hourSent: "13:27"
+        time: "13:27",
+        date: "06/02/2021"
     },
     {
         author: "orel",
         content: "tov",
-        hourSent: "13:27"
+        time: "13:27",
+        date: "06/03/2021"
     },
     {
         author: "doron",
         content: "spm",
-        hourSent: "13:28"
+        time: "13:28",
+        date: "06/03/2021"
     },
     {
         author: "orel",
         content: "tov",
-        hourSent: "13:28"
+        time: "13:28",
+        date: "06/04/2021"
     },
 ];
 

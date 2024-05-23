@@ -46,13 +46,13 @@
 .Chat-container{
   border-radius: 25px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: flex-start;
   overflow-y: scroll;
 }
 
 .Chat-container::-webkit-scrollbar {
-  width: 0.25rem;
+  width: 0.5rem;
   /* padding: 10px; */
 }
 
@@ -64,7 +64,7 @@
 
 .message-container{
   border-radius: 25px;
-  margin-block-start: 1rem;
+  margin-block-start: 0.5rem;
   padding: 16px;
   text-align: left;
   font-size: 1rem;

@@ -21,7 +21,7 @@ function getLines(txt) {
     lines = lines.map(l=>l[1]);
     return lines;
 }
-
+// in the future it will let the user choose the designated person between all authors (for group chats)
 export function getDesignated(name) {
     console.log('name', name)
     name = name.replace('WhatsApp Chat with ', '');
