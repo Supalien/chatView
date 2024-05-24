@@ -1,3 +1,11 @@
+p {
+  font-size: 0.85rem;
+  margin-block: 0.5em;
+  margin-inline: 0.5em;
+  color: lightgray;
+
+}
+
 .App {
   text-align: center;
 }
@@ -61,6 +69,14 @@
   border-radius: 10px;
   /* padding: 10px; */
 }
+
+.date-container {
+  background-color: gray;
+  border-radius: 14px;
+  display: flex;
+  align-self: center;
+  margin: 1rem;
+} 
 
 .message-container{
   border-radius: 25px;

@@ -31,7 +31,7 @@ function App() {
       {msgs[key].map((m, c) => m.author !== designated? 
       <Message className="message-container designated" msg={m} key={c}></Message> :
       <Message className="message-container other" msg={m} key={c}></Message>).reverse()}
-      <h3>{key}</h3>
+      <div className="date-container"><p>{key}</p></div>
       </>
   );
   //   m => m.author !== designated? 
