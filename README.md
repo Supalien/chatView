@@ -1,3 +1,30 @@
+# ChatView
+## TODO & IDEAS:
+- [ ] add formatting to dates
+- [ ] add time to messages
+- [ ] add phone frame
+- [ ] add lightmode-darkmode switch
+- [ ] add groupchat mode
+    - if chat has more than 2 senders or if the chat name doesnt match any of the authors
+    - show author names in message bubble above the content
+    - choose arbitrary green-sender
+- [ ] multiple chats, each chat has its own dropzone
+- [ ] ability to choose the designated author from a list (dropdown menu) of all authors available
+- [ ] share chat with a link
+    - upload data (or state) to server (maybe firestore)
+    - create unique link to view the chat
+- [ ] edit mode
+    - save to file
+    - create new messages
+- [ ] find messages with pattern matching
+- [ ] create and show statistcs
+
+
+*not in order of urgency
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
