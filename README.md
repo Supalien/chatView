@@ -2,6 +2,7 @@
 ## TODO & IDEAS:
 - [ ] add formatting to dates
 - [ ] add time to messages
+- [ ] button to open file dialog
 - [ ] add phone frame
 - [ ] add lightmode-darkmode switch
 - [ ] add groupchat mode
