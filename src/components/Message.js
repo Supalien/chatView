@@ -4,7 +4,8 @@ import '../App.css'
 function Message(props){
     return (
         <div className={props.className}>
-            <a>{props.msg.content}</a>
+            <span>{props.msg.content}</span>
+            <p>{props.msg.time}</p>
         </div>
     );
 }
