@@ -5,12 +5,12 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 
 .App-header {
-  justify-content: flex-start;
+  display: flex;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -18,6 +18,8 @@
 .App-main {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .App-link {
@@ -41,7 +43,7 @@
 
 
 .Chat-container{
-  border-radius: 25px;
+  /* border-radius: 25px; */
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-start;
