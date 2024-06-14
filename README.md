@@ -1,7 +1,6 @@
 # ChatView
 ## TODO & IDEAS:
 - [ ] add formatting to dates
-- [ ] add time to messages
 - [ ] button to open file dialog
 - [ ] add phone frame
 - [ ] add lightmode-darkmode switch
@@ -9,7 +8,6 @@
     - if chat has more than 2 senders or if the chat name doesnt match any of the authors
     - show author names in message bubble above the content
     - choose arbitrary green-sender
-- [ ] multiple chats, each chat has its own dropzone
 - [ ] ability to choose the designated author from a list (dropdown menu) of all authors available
 - [ ] share chat with a link
     - upload data (or state) to server (maybe firestore)
