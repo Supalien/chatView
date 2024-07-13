@@ -1,6 +1,6 @@
-import { useState, useEffect, createRef} from 'react';
+import { useState, useEffect, createRef, Fragment } from 'react';
 import Message from './Message.js';
-import {getMessages, getDesignated} from '../utils.js';
+import { getMessages, getDesignated } from '../utils.js';
 
 function PhoneFrame(props) {
   const [messages, setMessages] = useState(null);
@@ -9,11 +9,11 @@ function PhoneFrame(props) {
   const ref = createRef();
 
   useEffect(() => {
-    if (file && file.type === 'text/plain'){
-      file.text().then(res => {setMessages(getMessages(res))});
+    if (file && file.type === 'text/plain') {
+      file.text().then(res => { setMessages(getMessages(res)) });
       setDesignated(getDesignated(file.name));
     }
-  }, [file])
+  }, [file, props.file])
 
 
   function handleDragOver(e) {
@@ -35,38 +35,39 @@ function PhoneFrame(props) {
     return (
       <div className="Phone-frame" onDragOver={handleDragOver} onDrop={handleDrop}>
         <div className='Chat-container'>
-          <Message className="message-container other" msg={{content:"You can also click below if you don't want to drag.", time:"00:02"}}>
-            <input type="file" accept=".txt" ref={ref} onChange={handleChange}/>
-            <button className="btn" onClick={() => {ref.current.click()}}>
+          <Message className="message-container other" msg={{ content: "You can also click below if you don't want to drag.", time: "00:02" }}>
+            <input type="file" accept=".txt" ref={ref} onChange={handleChange} />
+            <button className="btn" onClick={() => { ref.current.click() }}>
               Select File
             </button>
           </Message>
-          <Message className="message-container other" msg={{content:"Or drag multiple chat files outside of this phone to view them all at once.", time:"00:01"}}></Message>
-          <Message className="message-container designated" msg={{content:"Drag your chat-file into this phone.", time:"00:00"}}></Message>
+          <Message className="message-container other" msg={{ content: "Or drag multiple chat files outside of this phone to view them all at once.", time: "00:01" }}></Message>
+          <Message className="message-container designated" msg={{ content: "Drag your chat-file into this phone.", time: "00:00" }}></Message>
           <div className="date-container"><p>02/02/2020</p></div>
-        <Message className="message-container other" msg={{content:"When you do that, WhatsApp will ask you to choose between two options. choose \"Without media\".", time:"00:02"}}></Message>
-        <Message className="message-container designated" msg={{content:"Then tap the three dots on the corner, tap \"More\" and then \"Export chat\"", time:"00:01"}}></Message>
-        <Message className="message-container designated" msg={{content:"To get your chat-file, go to WhatsApp and choose a chat.", time:"00:00"}}></Message>
+          <Message className="message-container other" msg={{ content: "When you do that, WhatsApp will ask you to choose between two options. choose \"Without media\".", time: "00:02" }}></Message>
+          <Message className="message-container designated" msg={{ content: "Then tap the three dots on the corner, tap \"More\" and then \"Export chat\"", time: "00:01" }}></Message>
+          <Message className="message-container designated" msg={{ content: "To get your chat-file, go to WhatsApp and choose a chat.", time: "00:00" }}></Message>
           <div className="date-container"><p>12/02/2021</p></div>
-        </div> 
+        </div>
       </div>
     );
   }
 
   let msgs = Object.groupBy(messages, (m) => m.date);
-  msgs = Object.keys(msgs).map(key => <>
-    {msgs[key].map((m, c) => m.author !== designated? 
-    <Message className="message-container designated" msg={m} key={c} id={c}></Message> :
-    <Message className="message-container other" msg={m} key={c} id={c}></Message>).reverse()}
-    <div className="date-container" key={key}><p>{key}</p></div>
-    </>
+  let c = 0;
+  msgs = Object.keys(msgs).map((key, cc) => <Fragment key={cc}>
+    {msgs[key].map(m => m.author !== designated ?
+      <Message className="message-container designated" msg={m} key={c++} id={c}></Message> :
+      <Message className="message-container other" msg={m} key={c++} id={c}></Message>).reverse()}
+    <div className="date-container" key={c++}><p>{key}</p></div>
+  </Fragment>
   );
-  
+  msgs.reverse();
   return (
     <div className="Phone-frame" onDragOver={handleDragOver} onDrop={handleDrop}>
       <div className='Chat-container'>
-        {msgs.reverse()}
-      </div> 
+        {msgs}
+      </div>
     </div>
   );
 }
