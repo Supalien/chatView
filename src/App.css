@@ -62,6 +62,33 @@
   /* padding: 10px; */
 }
 
+.Chat-container input {
+  display: none;
+}
+
+.btn {
+  border: none;
+  display: flex;
+  padding: 0.75rem 1.5rem;
+  background-color: #bdd1ee;
+  color: #000000;
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+  transition: all .6s ease;
+  margin: 1rem;
+}
+
+button:hover {
+  opacity: 90%;
+  box-shadow: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
+}
+
+button:active {
+  opacity: .65;
+  box-shadow: none;
+}
+
 .date-container {
   background-color: whitesmoke;
   border-radius: 14px;

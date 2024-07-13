@@ -23,7 +23,9 @@ function App() {
         </h1>
       </header>
       <main className='App-main' onDragOver={handleDragOver} onDrop={handleDrop}>
-        {files && Array.from(files).map((file, k) => <PhoneFrame file={file} key={k} id={k}></PhoneFrame>)}
+        {files ?
+        Array.from(files).map((file, k) => <PhoneFrame file={file} key={k} id={k}></PhoneFrame>):
+        <PhoneFrame></PhoneFrame>}
       </main>
     </div>
   );
